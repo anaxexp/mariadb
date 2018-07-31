@@ -1,6 +1,6 @@
 # MariaDB Docker Container Image
 
-[![Build Status](https://circleci.com/gh/anaxexp/mariadb/tree/master.svg?style=shield&circle-token=cc886e09fd6fd0458c7d0e4563ab90d072ccd0bc)](https://circleci.com/gh/anaxexp/mariadb)
+[![Build Status](https://circleci.com/gh/anaxexp/mariadb.svg?style=svg&circle-token=7a52e2a2fee1b91f4fc447245f715cacd795456f)](https://circleci.com/gh/anaxexp/mariadb)
 [![Docker Pulls](https://img.shields.io/docker/pulls/anaxexp/mariadb.svg)](https://hub.docker.com/r/anaxexp/mariadb)
 [![Docker Stars](https://img.shields.io/docker/stars/anaxexp/mariadb.svg)](https://hub.docker.com/r/anaxexp/mariadb)
 [![Docker Layers](https://images.microbadger.com/badges/image/anaxexp/mariadb.svg)](https://microbadger.com/images/anaxexp/mariadb)
