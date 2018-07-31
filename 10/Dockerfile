@@ -1,4 +1,4 @@
-FROM anaxexp/alpine:3.7-2.0.2
+FROM anaxexp/alpine:3.7
 
 ARG MARIADB_VER
 
