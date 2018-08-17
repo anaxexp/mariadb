@@ -91,11 +91,11 @@ Supported tags and respective `Dockerfile` links:
 | [`MYSQL_BACK_LOG`]                       | `100`               | `100`               | `100`             |
 | [`MYSQL_CHARACTER_SET_FILESYSTEM`]       | `utf8`              | `utf8`              | `utf8`            |
 | [`MYSQL_CHARACTER_SET_SERVER`]           | `utf8`              | `utf8`              | `utf8`            |
-| `MYSQL_CLIENT_DEFAULT_CHARACTER_SET`     | `utf8`              | `utf8`              | `utf8`            |
+| [`MYSQL_CLIENT_DEFAULT_CHARACTER_SET     | `utf8`              | `utf8`              | `utf8`            |
 | [`MYSQL_COLLATION_SERVER`]               | `utf8_unicode_ci`   | `utf8_unicode_ci`   | `utf8_unicode_ci` |
-| `MYSQL_DATABASE`                         |                     |                     |                   |
+| [`MYSQL_DATABASE`]                       |                     |                     |                   |
 | [`MYSQL_DEFAULT_STORAGE_ENGINE`]         | `InnoDB`            | `InnoDB`            | `InnoDB`          |
-| `MYSQL_DUMP_MAX_ALLOWED_PACKET`          | `1G`                | `1G`                | `1G`              |
+| [`MYSQL_DUMP_MAX_ALLOWED_PACKET`]        | `1G`                | `1G`                | `1G`              |
 | [`MYSQL_GENERAL_LOG`]                    | `1`                 | `1`                 | `1`               |
 | [`MYSQL_INIT_CONNECT`]                   | `SET NAMES utf8`    | `SET NAMES utf8`    | `SET NAMES utf8`  |
 | [`MYSQL_INNODB_BUFFER_POOL_INSTANCES`]   | `1`                 | `1`                 | `1`               |
@@ -130,15 +130,15 @@ Supported tags and respective `Dockerfile` links:
 | [`MYSQL_NET_WRITE_TIMEOUT`]              | `90`                | `90`                | `90`              |
 | [`MYSQL_OPTIMIZER_PRUNE_LEVEL`]          | `1`                 | `1`                 | `1`               |
 | [`MYSQL_OPTIMIZER_SEARCH_DEPTH`]         | `62`                | `62`                | `62`              |
-| `MYSQL_PASSWORD`                         |                     |                     |                   |
+| [`MYSQL_PASSWORD`]                       |                     |                     |                   |
 | [`MYSQL_PERFORMANCE_SCHEMA`]             | `OFF`               | `OFF`               | `OFF`             |
-| `MYSQL_PORT`                             | `3306`              | `3306`              | `3306`            |
+| [`MYSQL_PORT`]                           | `3306`              | `3306`              | `3306`            |
 | [`MYSQL_QUERY_CACHE_LIMIT`]              | `1M`                | `1M`                | `1M`              |
 | [`MYSQL_QUERY_CACHE_MIN_RES_UNIT`]       | `2K`                | `2K`                | `2K`              |
 | [`MYSQL_QUERY_CACHE_SIZE`]               | `128M`              | `128M`              | `128M`            |
 | [`MYSQL_QUERY_CACHE_TYPE`]               | `ON`                | `ON`                | `ON`              |
 | [`MYSQL_RELAY_LOG_RECOVERY`]             | `0`                 | `0`                 | `0`               |
-| `MYSQL_ROOT_PASSWORD`                    |                     |                     |                   |
+| [`MYSQL_ROOT_PASSWORD`]                  |                     |                     |                   |
 | [`MYSQL_SLOW_QUERY_LOG`]                 | `0`                 | `0`                 | `0`               |
 | [`MYSQL_SORT_BUFFER_SIZE`]               | `2M`                | `2M`                | `2M`              |
 | [`MYSQL_TABLE_DEFINITION_CACHE`]         | `400`               | `400`               | `400`             |
@@ -157,17 +157,18 @@ Supported tags and respective `Dockerfile` links:
 ## Orchestration Actions
 
 Usage:
+
 ```
 make COMMAND [params ...]
- 
+
 commands:
     import source=</path/to/dump.zip or http://example.com/url/to/dump.sql.gz> [db root_password host ignore="table1;table2;cache_%"] 
-    backup filepath=</path/to/backup.sql.gz> [root_password host db nice ionice] 
-    query query [db user password host] 
-    query-silent query [db user password host] 
+    backup filepath=</path/to/backup.sql.gz> [root_password host db]
+    query query [db user password host]
+    query-silent query [db user password host]
     query-root query [db root_password host]
     check-ready [root_password host max_try wait_seconds]  
-    
+
 default params values:
     user $MYSQL_USER
     password $MYSQL_PASSWORD

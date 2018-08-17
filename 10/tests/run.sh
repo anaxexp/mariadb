@@ -71,5 +71,5 @@ mariadb make import source="/mnt/backups/export.sql.gz"
 [ "$(mariadb make query-silent query='SELECT COUNT(*) FROM test1')" = 0 ]
 [ "$(mariadb make query-silent query='SELECT COUNT(*) FROM test2')" = 0 ]
 
-mariadb make import source="https://s3.amazonaws.com/wodby-sample-files/mariadb-import-test/export.zip"
-mariadb make import source="https://s3.amazonaws.com/wodby-sample-files/mariadb-import-test/export.tar.gz"
+mariadb make import source="https://s3-us-west-1.amazonaws.com/anaxexp-sample-files/mariadb-import-test/export.zip"
+mariadb make import source="https://s3-us-west-1.amazonaws.com/anaxexp-sample-files/mariadb-import-test/export.tar.gz"
